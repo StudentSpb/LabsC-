@@ -1,0 +1,6 @@
+﻿  Shape.cpp
+  myRect.cpp
+  main.cpp
+d:\labsc++\oopc++\lab1\main.cpp(289): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+  Lab1.vcxproj -> D:\LabsC++\OOPC++\Debug\Lab1.exe

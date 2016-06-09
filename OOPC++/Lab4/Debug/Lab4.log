@@ -1,0 +1,10 @@
+﻿  Point.cpp
+  Node.cpp
+  main.cpp
+  List.cpp
+d:\labsc++\oopc++\lab4\list.cpp(21): warning C4018: '<': signed/unsigned mismatch
+d:\labsc++\oopc++\lab4\list.cpp(128): warning C4018: '<': signed/unsigned mismatch
+d:\labsc++\oopc++\lab4\list.cpp(133): warning C4018: '<': signed/unsigned mismatch
+  Cicle.cpp
+  Generating Code...
+  Lab4.vcxproj -> D:\LabsC++\OOPC++\Debug\Lab4.exe
