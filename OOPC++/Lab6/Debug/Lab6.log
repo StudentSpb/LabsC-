@@ -1,15 +1,8 @@
-﻿Сборка начата 10.06.2016 11:32:35.
-     1>Проект "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" в узле 3 (целевые объекты Rebuild).
+﻿Сборка начата 10.06.2016 12:44:41.
+     1>Проект "C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Cicle.cpp List.cpp main.cpp Node.cpp Rect.cpp Shape.cpp
-         Shape.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Cicle.cpp Rect.cpp
          Rect.cpp
-         Node.cpp
-         main.cpp
-         List.cpp
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(22): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(129): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(134): warning C4018: <: несоответствие типов со знаком и без знака
          Cicle.cpp
          Создание кода...
        Link:
@@ -20,8 +13,8 @@
          Debug\Rect.obj
          Debug\Shape.obj
          Lab6.vcxproj -> C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab6.exe
-     1>Сборка проекта "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" завершена (целевые объекты Rebuild).
+     1>Сборка проекта "C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:03.73
+Затраченное время: 00:00:01.85

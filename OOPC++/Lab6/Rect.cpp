@@ -55,3 +55,13 @@ Rect::~Rect()
 	
 }
 
+std::ostream& operator<<(std::ostream& os, const Rect& string)
+{
+	os << "Rectangle: " <<"Bottom-" << string.m_bottom << " Top-" << string.m_top << " Left-" << string.m_left << " Right-" << string.m_right << std::endl;
+	return os;
+}
+
+std::ofstream& operator<<(std::ofstream& ofs, const Rect& cir)
+{
+	return ofs;
+}

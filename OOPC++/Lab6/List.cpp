@@ -260,7 +260,14 @@ std::ostream & operator<<(std::ostream & os, const List & string)
 	Node* p = string.Head.pNext;
 	while(p != &string.Tail)
 	{
-		os << p->m_Data;
+		if (const Rect* rec = dynamic_cast<const Rect* >(p->m_Data))
+		{
+			os << *rec;
+		}
+		if (const Circle* rec = dynamic_cast<const Circle* >(p->m_Data))
+		{
+			os << *rec;
+		}
 		p = p->pNext;
 	}
 	return os;

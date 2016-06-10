@@ -61,7 +61,7 @@ Circle* Circle::Clone() const
 
 std::ostream & operator<<(std::ostream & os, const Circle & string)
 {
-	os << "Center: " << string.m_x << " " << string.m_y << " Diametr:" << string.m_diametr <<std::endl;
+	os << "Cicle: " <<"Center-" << string.m_x << " " << string.m_y << " Diametr-" << string.m_diametr <<std::endl;
 	return os;
 }
 

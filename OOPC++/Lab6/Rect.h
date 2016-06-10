@@ -1,5 +1,6 @@
 #pragma once
 #include "Shape.h"
+#include <ostream>
 
 class Rect : public Shape
 {
@@ -21,4 +22,9 @@ public:
 
 	~Rect();
 
+	friend std::ostream & operator<<(std::ostream & os, const Rect & string);
+	friend std::ofstream& operator<<(std::ofstream& ofs, const Rect& cir);
+
 };
+std::ostream & operator<<(std::ostream & os, const Rect & string);
+std::ofstream& operator<<(std::ofstream& ofs, const Rect& cir);
