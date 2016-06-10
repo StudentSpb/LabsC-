@@ -228,29 +228,29 @@ void List::ClearList()
 	}
 }
 
-void List::Sort()
+void List::SortSqre()
 {
-	Node* p = &Head;
+	Node* p = Head.pNext;
 	int j = m_size;
-	while(p != &Tail)
+	for (int i = 0; i < m_size; i++)
 	{
 		Node* np = p;
-		for (int i = 0; i <j-1; i++)
-		{//Привести к типу похоже тут надо
-			/*
-			if (np->m_Data.GetSquare() > np->pNext->m_Data.GetSquare()) 
+		for (int k = 0; k <j-3; k++)
+		{
+			if (np->m_Data->GetSquare() > np->pNext->m_Data->GetSquare()) 
 			{
-				Node* pp = np->pNext;
-				Node* ppp = np->pPrev;
-				np->pNext = np->pNext->pNext;
-				np->pPrev = pp;
-				pp->pNext = np;
-				pp->pPrev = ppp;
+				//Нужно править сортировку
+				Node* prev = np->pPrev;
+				Node* next = np->pNext;
+				np->pNext = next->pNext;
+				np->pNext->pPrev = np;
+				np->pPrev = next;
+				prev->pNext = next;
+				next->pPrev = prev;
+				next->pNext = np;
 			}
 			np = np->pNext;
-			*/
 		}
-		p = p->pNext;
 		j--;
 	}
 }

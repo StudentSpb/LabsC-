@@ -19,7 +19,7 @@ public:
 
 	bool operator ==(const Shape& other);
 
-	virtual float GetSquare();
+	virtual float GetSquare() override;
 	virtual Circle* Clone() const override;
 
 	friend std::ostream & operator<<(std::ostream & os, const Circle & string);

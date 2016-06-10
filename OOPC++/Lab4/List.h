@@ -23,7 +23,7 @@ public:
 	bool RemoveCircle(const Circle& other);
 	int RevomeAllFound(const Circle& cir);
 	void ClearList();
-	void Sort();
+	void SortSqre();
 
 	friend std::ostream & operator<<(std::ostream & os, const List & string);
 	friend std::ifstream& operator >> (std::ifstream& ifs, List& l);

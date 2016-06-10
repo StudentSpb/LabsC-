@@ -24,7 +24,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	myList.AddToTail(cir4);
 
 	std::cout << myList;
-	myList.Sort();
+	myList.SortSqre();
 	std::cout << myList;
 	int cnt = myList.RevomeAllFound(cir5);
 	std::ofstream fout;

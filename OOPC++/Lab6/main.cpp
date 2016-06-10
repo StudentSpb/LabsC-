@@ -14,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Circle cir2;
 	Circle cir3(2, 7, 5, Green);
 	Circle cir4(3, 8, 9);
-	Circle cir5(3, 8, 9, White);
+	Circle cir5(3, 5, 6, White);
 
 	Rect rect(1, 2, 3, 4, Blue);
 	Rect rect2(3, 2, 2, 1, Blue);
@@ -33,7 +33,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	myList.AddToHead(cir5);
 
 	std::cout << myList;
-
+	std::cout << std::endl;
+	myList.SortSqre();
+	std:: cout<< myList;
 	stop
 
 		return 0;

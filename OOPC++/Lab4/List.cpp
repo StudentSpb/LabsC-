@@ -214,7 +214,7 @@ void List::ClearList()
 	}
 }
 
-void List::Sort()
+void List::SortSqre()
 {
 	Node* p = &Head;
 	int j = m_size;

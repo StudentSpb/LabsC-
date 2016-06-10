@@ -23,7 +23,7 @@ public:
 	bool Remove(const Shape& other);
 	int RevomeAllFound(const Shape& cir);
 	void ClearList();
-	void Sort();
+	void SortSqre();
 
 	friend std::ostream & operator<<(std::ostream & os, const List & string);
 	friend std::ifstream& operator >> (std::ifstream& ifs, List& l);
