@@ -1,8 +1,27 @@
-﻿  main.cpp
-d:\labsc++\oopc++\lab6\main.cpp(3): fatal error C1083: Cannot open include file: 'Point.h': No such file or directory
-  List.cpp
-d:\labsc++\oopc++\lab6\list.cpp(22): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab6\list.cpp(129): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab6\list.cpp(134): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab6\list.cpp(179): error C2682: cannot use 'dynamic_cast' to convert from 'const Shape *' to 'Rect *'
-  Generating Code...
+﻿Сборка начата 10.06.2016 11:32:35.
+     1>Проект "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" в узле 3 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Cicle.cpp List.cpp main.cpp Node.cpp Rect.cpp Shape.cpp
+         Shape.cpp
+         Rect.cpp
+         Node.cpp
+         main.cpp
+         List.cpp
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(22): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(129): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab6\list.cpp(134): warning C4018: <: несоответствие типов со знаком и без знака
+         Cicle.cpp
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab6.lib" /MACHINE:X86 Debug\Cicle.obj
+         Debug\List.obj
+         Debug\main.obj
+         Debug\Node.obj
+         Debug\Rect.obj
+         Debug\Shape.obj
+         Lab6.vcxproj -> C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab6.exe
+     1>Сборка проекта "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab6\Lab6.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:03.73

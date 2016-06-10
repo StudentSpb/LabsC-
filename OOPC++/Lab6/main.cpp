@@ -1,6 +1,5 @@
 #include <tchar.h>
 
-#include "Point.h"
 #include "Circle.h"
 #include "List.h"
 #include <iostream>

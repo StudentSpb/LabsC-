@@ -1,15 +1,28 @@
-﻿  myString.cpp
-  main.cpp
-  Counter.cpp
-d:\labsc++\oopc++\lab5\counter.cpp(12): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-d:\labsc++\oopc++\lab5\counter.cpp(90): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(603): note: see declaration of 'strupr'
-d:\labsc++\oopc++\lab5\counter.cpp(100): warning C4996: 'strlwr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strlwr. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(574): note: see declaration of 'strlwr'
-d:\labsc++\oopc++\lab5\counter.cpp(110): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab5\counter.cpp(115): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab5\counter.cpp(117): warning C4018: '<': signed/unsigned mismatch
-d:\labsc++\oopc++\lab5\counter.cpp(128): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Lab5.vcxproj -> D:\LabsC++\OOPC++\Debug\Lab5.exe
+﻿Сборка начата 10.06.2016 11:32:33.
+     1>Проект "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab5\Lab5.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Counter.cpp main.cpp myString.cpp
+         myString.cpp
+         main.cpp
+         Counter.cpp
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(12): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note:  см. объявление "strcpy"
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(90): warning C4996: 'strupr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strupr. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(603): note:  см. объявление "strupr"
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(100): warning C4996: 'strlwr': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strlwr. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(574): note:  см. объявление "strlwr"
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(110): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(115): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(117): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab5\counter.cpp(128): warning C4018: <: несоответствие типов со знаком и без знака
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab5.lib" /MACHINE:X86 Debug\Counter.obj
+         Debug\main.obj
+         Debug\myString.obj
+         Lab5.vcxproj -> C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab5.exe
+     1>Сборка проекта "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab5\Lab5.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:03.72

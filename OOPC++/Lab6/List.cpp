@@ -176,13 +176,25 @@ bool List::Remove(const Shape & other)
 	Node* p = Head.pNext;
 	while (p != &Tail)
 	{
-		if (const Rect* pr = dynamic_cast<Rect* const>(&other))
-		if(p->m_Data == &other)
+		if (const Rect* rec = dynamic_cast<const Rect* >(&other))
 		{
-			delete p;
-			m_size--;
-			return true;
+			if (p->m_Data == rec)
+			{
+				delete p;
+				m_size--;
+				return true;
+			}
 		}
+		else
+		{
+			const Circle* cic = dynamic_cast<const Circle* >(&other);
+			if (p->m_Data == cic)
+			{
+				delete p;
+				m_size--;
+				return true;
+			}
+		}			
 		p = p->pNext;
 	}
 	return false;
