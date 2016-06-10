@@ -11,7 +11,7 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Circle cir(3, 4, 3, Blue);
-	Circle cir2;
+	Circle cir2(1,2);
 	Circle cir3(2, 7, 5, Green);
 	Circle cir4(3, 8, 9);
 	Circle cir5(3, 5, 6, White);

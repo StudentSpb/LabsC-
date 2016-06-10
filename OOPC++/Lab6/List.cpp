@@ -4,6 +4,7 @@
 #include <algorithm>
 #include "Rect.h"
 #include "Circle.h"
+#include <iostream>
 
 List::List()
 {
@@ -232,14 +233,13 @@ void List::SortSqre()
 {
 	Node* p = Head.pNext;
 	int j = m_size;
-	for (int i = 0; i < m_size; i++)
+	for (int k = 0; k < m_size + 1; k++)
 	{
 		Node* np = p;
-		for (int k = 0; k <j-3; k++)
+		for (int i = 0; i < j - 2; i++)
 		{
-			if (np->m_Data->GetSquare() > np->pNext->m_Data->GetSquare()) 
+			if (np->m_Data->GetSquare() > np->pNext->m_Data->GetSquare())
 			{
-				//Нужно править сортировку
 				Node* prev = np->pPrev;
 				Node* next = np->pNext;
 				np->pNext = next->pNext;

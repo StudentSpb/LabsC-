@@ -30,7 +30,8 @@ Rect::Rect(const Rect& other): Shape(other), m_left(other.m_left), m_right(other
 
 float Rect::GetSquare()
 {
-	return (m_right - m_left)*(m_bottom - m_top);
+	float sqre = (m_right - m_left)*(m_bottom - m_top);
+	return sqre;
 }
 
 

@@ -216,25 +216,26 @@ void List::ClearList()
 
 void List::SortSqre()
 {
-	Node* p = &Head;
+	Node* p = Head.pNext;
 	int j = m_size;
-	while(p != &Tail)
+	for (int k = 0; k < m_size + 1; k++)
 	{
 		Node* np = p;
-		for (int i = 0; i <j-1; i++)
+		for (int i = 0; i < j - 2; i++)
 		{
-			if (np->m_Data.GetSquare() > np->pNext->m_Data.GetSquare()) 
+			if (np->m_Data.GetSquare()> np->pNext->m_Data.GetSquare())
 			{
-				Node* pp = np->pNext;
-				Node* ppp = np->pPrev;
-				np->pNext = np->pNext->pNext;
-				np->pPrev = pp;
-				pp->pNext = np;
-				pp->pPrev = ppp;
+				Node* prev = np->pPrev;
+				Node* next = np->pNext;
+				np->pNext = next->pNext;
+				np->pNext->pPrev = np;
+				np->pPrev = next;
+				prev->pNext = next;
+				next->pPrev = prev;
+				next->pNext = np;
 			}
 			np = np->pNext;
 		}
-		p = p->pNext;
 		j--;
 	}
 }

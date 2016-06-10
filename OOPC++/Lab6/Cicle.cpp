@@ -51,7 +51,8 @@ bool Circle::operator==(const Shape & other)
 
 float Circle::GetSquare()
 {
-	return (3,14 * pow(m_diametr,2))/4;
+	float sqre = m_diametr*m_diametr * 3.14 / 4;
+	return sqre;
 }
 
 Circle* Circle::Clone() const

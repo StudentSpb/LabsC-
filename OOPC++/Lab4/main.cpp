@@ -14,14 +14,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	Circle cir2;
 	Circle cir3(2,7, 5);
 	Circle cir4(3,8, 9);
-	Circle cir5(3, 8, 9);
+	Circle cir5(3, 8, 7);
 
 	List myList;
 	myList.AddToHead(cir);
-	myList.AddToTail(cir3);
+	myList.AddToHead(cir3);
 	myList.AddToHead(cir2);
-	myList.AddToTail(cir5);
-	myList.AddToTail(cir4);
+	myList.AddToHead(cir5);
+	myList.AddToHead(cir4);
 
 	std::cout << myList;
 	myList.SortSqre();

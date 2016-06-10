@@ -11,7 +11,7 @@ private:
 	//Point m_point;
 
 public:
-	explicit Circle(int x = 0, int y = 0, float diametr = 0, Color color = Red);
+	 Circle(int x = 0, int y = 0, float diametr = 15, Color color = Red);
 
 	Circle(const Circle& other);
 	Circle(Circle&& other);
@@ -19,7 +19,7 @@ public:
 
 	bool operator ==(const Shape& other);
 
-	virtual float GetSquare() override;
+	virtual float GetSquare();
 	virtual Circle* Clone() const override;
 
 	friend std::ostream & operator<<(std::ostream & os, const Circle & string);

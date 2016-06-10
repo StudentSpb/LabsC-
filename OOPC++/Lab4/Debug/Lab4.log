@@ -1,25 +1,6 @@
-﻿Сборка начата 10.06.2016 11:32:30.
-     1>Проект "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab4\Lab4.vcxproj" в узле 3 (целевые объекты Rebuild).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Cicle.cpp List.cpp main.cpp Node.cpp Point.cpp
-         Point.cpp
-         Node.cpp
-         main.cpp
-         List.cpp
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab4\list.cpp(21): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab4\list.cpp(128): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\posohov_na\documents\project\labsc-\oopc++\lab4\list.cpp(133): warning C4018: <: несоответствие типов со знаком и без знака
-         Cicle.cpp
-         Создание кода...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab4.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab4.lib" /MACHINE:X86 Debug\Cicle.obj
-         Debug\List.obj
-         Debug\main.obj
-         Debug\Node.obj
-         Debug\Point.obj
-         Lab4.vcxproj -> C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Debug\Lab4.exe
-     1>Сборка проекта "c:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab4\Lab4.vcxproj" завершена (целевые объекты Rebuild).
-
-Сборка успешно завершена.
-
-Затраченное время: 00:00:05.46
+﻿  List.cpp
+d:\labsc-\oopc++\lab4\list.cpp(21): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab4\list.cpp(128): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab4\list.cpp(133): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab4\list.cpp(221): warning C4018: '<': signed/unsigned mismatch
+  Lab4.vcxproj -> D:\LabsC-\OOPC++\Debug\Lab4.exe
