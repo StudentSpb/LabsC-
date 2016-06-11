@@ -1,10 +1,10 @@
 #include "List.h"
 #include "Node.h"
 #include "Shape.h"
-#include <algorithm>
 #include "Rect.h"
 #include "Circle.h"
 #include <iostream>
+#include <fstream>
 
 List::List()
 {
@@ -122,7 +122,16 @@ List & List::operator=(const List & other)
 		pOther = other.Head.pNext;
 		for (int i = 0; i < count; i++)
 		{
-			pThis->m_Data = pOther->m_Data;
+			try
+			{
+				*pThis->m_Data = *pOther->m_Data;
+			}
+			catch (const char*)
+			{
+				delete  pThis->m_Data;
+				pThis->m_Data = pOther->m_Data->Clone();
+			}
+
 			pThis = pThis->pNext;
 			pOther = pOther->pNext;
 		}
@@ -144,7 +153,8 @@ List & List::operator=(const List & other)
 
 List & List::operator=(List && other)
 {
-	if (this != &other) {
+	if (this != &other) 
+	{
 		this->ClearList();
 		if (other.m_size != 0) {
 			Head.pNext = other.Head.pNext;
@@ -177,38 +187,25 @@ bool List::Remove(const Shape & other)
 	Node* p = Head.pNext;
 	while (p != &Tail)
 	{
-		if (const Rect* rec = dynamic_cast<const Rect* >(&other))
+		if (*p->m_Data == other)
 		{
-			if (p->m_Data == rec)
-			{
-				delete p;
-				m_size--;
-				return true;
-			}
+			delete p;
+			m_size--;
+			return true;
 		}
-		else
-		{
-			const Circle* cic = dynamic_cast<const Circle* >(&other);
-			if (p->m_Data == cic)
-			{
-				delete p;
-				m_size--;
-				return true;
-			}
-		}			
 		p = p->pNext;
 	}
 	return false;
 }
 
-int List::RevomeAllFound(const Shape& cir)
+int List::RevomeAllFound(const Shape& other)
 {
 	int count = 0;
 	Node* p = Head.pNext;
 	Node* tmp2;
 	while (p != &Tail) 
 	{
-		if (p->m_Data == &cir) 
+		if (*p->m_Data == other)
 		{
 			tmp2 = p->pPrev;
 			delete p;
@@ -229,29 +226,31 @@ void List::ClearList()
 	}
 }
 
-void List::SortSqre()
+void List::SortSqre(Sort typeSort)
 {
 	Node* p = Head.pNext;
-	int j = m_size;
-	for (int k = 0; k < m_size + 1; k++)
+	for (int k = 0; k < m_size-1; k++)
 	{
 		Node* np = p;
-		for (int i = 0; i < j - 2; i++)
+		for (int i = 0; i < m_size - k - 1; i++)
 		{
-			if (np->m_Data->GetSquare() > np->pNext->m_Data->GetSquare())
+			switch (typeSort)
 			{
-				Node* prev = np->pPrev;
-				Node* next = np->pNext;
-				np->pNext = next->pNext;
-				np->pNext->pPrev = np;
-				np->pPrev = next;
-				prev->pNext = next;
-				next->pPrev = prev;
-				next->pNext = np;
+			case mSquare:
+				if (np->m_Data->GetSquare() > np->pNext->m_Data->GetSquare())
+				{
+					std::swap(np->m_Data, np->pNext->m_Data);
+				}
+				break;
+			case mColor:
+				if (np->m_Data->GetColor() > np->pNext->m_Data->GetColor())
+				{
+					std::swap(np->m_Data, np->pNext->m_Data);
+				}
+				break;
 			}
 			np = np->pNext;
 		}
-		j--;
 	}
 }
 
@@ -264,44 +263,67 @@ std::ostream & operator<<(std::ostream & os, const List & string)
 		{
 			os << *rec;
 		}
-		if (const Circle* rec = dynamic_cast<const Circle* >(p->m_Data))
+		if (const Circle* cir = dynamic_cast<const Circle* >(p->m_Data))
 		{
-			os << *rec;
+			os << *cir;
 		}
 		p = p->pNext;
 	}
 	return os;
 }
 
+
 std::ofstream& operator<<(std::ofstream& ofs, const List& list) 
 {
-	/*
+	
 	ofs << "" << list.m_size << std::endl;
 	Node* p = list.Head.pNext;
 	while (p != &list.Tail) 
 	{
-		ofs << p->m_Data << std::endl;
+		if (const Rect* rec = dynamic_cast<const Rect* >(p->m_Data))
+		{
+			ofs << *rec;
+		}
+		if (const Circle* cir = dynamic_cast<const Circle* >(p->m_Data))
+		{
+			ofs << *cir;
+		}
+		//ofs << *p->m_Data << std::endl;
 		p = p->pNext;
 	}
-	*/
 	return ofs;
 }
 
+
 std::ifstream& operator >> (std::ifstream& ifs, List& string) 
 {
-	/*
+	
 	int count;
 	ifs >> count;
-	int x;
-	int y;
-	float diametr;
+	int obj;
 	for (int i = 0; i < count; i++) 
 	{
-		ifs >> x >> y >> diametr;
-		Circle cir(x, y, diametr);
-		string.AddToTail(cir);
+		ifs >> obj;
+		if(obj == 1)
+		{
+			int x;
+			int y;
+			float diametr;
+			ifs >> x >> y >> diametr;
+			Circle cir(x, y, diametr);
+			string.AddToTail(cir);
+		}
+		else
+		{
+			int bot;
+			int top;
+			int left;
+			int right;
+			ifs >> bot >> top >> left>> right;
+			Rect rec(left, right, top, bot);
+			string.AddToTail(rec);
+		}
 	}
-	*/
 	return ifs;
 }
 

@@ -32,10 +32,32 @@ int _tmain(int argc, _TCHAR* argv[])
 	myList.AddToHead(cir4);
 	myList.AddToHead(cir5);
 
-	std::cout << myList;
-	std::cout << std::endl;
-	myList.SortSqre();
-	std:: cout<< myList;
+	std::cout << myList << std::endl;
+	myList.SortSqre(mSquare);
+	std:: cout<< myList << std::endl;
+
+	myList.Remove(cir4);
+	std::cout << myList << std::endl;
+
+	List myList2;
+	myList2.AddToTail(rect3);
+	myList2.AddToTail(cir3);
+	myList2.AddToHead(rect4);
+	myList = myList2;
+
+	std::cout << myList2 << std::endl;
+	
+	std::ofstream fout;
+	fout.open("MyList.txt");
+	fout << myList2;
+	fout.close();
+
+	List newList;
+	std::ifstream fcin;
+	fcin.open("MyList.txt");
+	fcin >> newList;
+	fout.close();
+	std::cout << newList << std::endl;
 	stop
 
 		return 0;

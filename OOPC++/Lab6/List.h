@@ -3,6 +3,8 @@
 #include "Node.h"
 #include <ostream>
 
+enum Sort { mSquare, mColor };
+
 class List
 {
 	Node Head, Tail;
@@ -23,7 +25,7 @@ public:
 	bool Remove(const Shape& other);
 	int RevomeAllFound(const Shape& cir);
 	void ClearList();
-	void SortSqre();
+	void SortSqre(Sort typeSort);
 
 	friend std::ostream & operator<<(std::ostream & os, const List & string);
 	friend std::ifstream& operator >> (std::ifstream& ifs, List& l);

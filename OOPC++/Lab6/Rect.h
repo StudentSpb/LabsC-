@@ -16,15 +16,15 @@ public:
 	explicit Rect(float left = 0, float right = 0, float top = 0, float bottom = 0, Color color = White);
 	Rect(const Rect& other);
 
-	virtual float GetSquare();
+	virtual float GetSquare() override;
 	virtual Rect* Clone() const override;
-	virtual bool operator ==(const Shape& other);
+	virtual bool operator ==(const Shape& other) override;
+	virtual Rect* operator = (const Shape& other) override;
+	virtual Rect* operator = (Shape&& other) override;
 
 	~Rect();
 
 	friend std::ostream & operator<<(std::ostream & os, const Rect & string);
-	friend std::ofstream& operator<<(std::ofstream& ofs, const Rect& cir);
+	friend std::ofstream& operator<<(std::ofstream& ofs, const Rect& rec);
 
 };
-std::ostream & operator<<(std::ostream & os, const Rect & string);
-std::ofstream& operator<<(std::ofstream& ofs, const Rect& cir);

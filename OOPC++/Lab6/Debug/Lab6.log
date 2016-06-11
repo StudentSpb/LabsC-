@@ -1,6 +1,13 @@
-﻿  List.cpp
+﻿  main.cpp
+  Rect.cpp
+  List.cpp
 d:\labsc-\oopc++\lab6\list.cpp(23): warning C4018: '<': signed/unsigned mismatch
-d:\labsc-\oopc++\lab6\list.cpp(130): warning C4018: '<': signed/unsigned mismatch
-d:\labsc-\oopc++\lab6\list.cpp(135): warning C4018: '<': signed/unsigned mismatch
-d:\labsc-\oopc++\lab6\list.cpp(236): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab6\list.cpp(139): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab6\list.cpp(144): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab6\list.cpp(232): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab6\list.cpp(235): warning C4018: '<': signed/unsigned mismatch
+d:\labsc-\oopc++\lab6\list.cpp(310): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Cicle.cpp
+d:\labsc-\oopc++\lab6\cicle.cpp(62): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
   Lab6.vcxproj -> D:\LabsC-\OOPC++\Debug\Lab6.exe
