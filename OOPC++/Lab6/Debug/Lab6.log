@@ -1,12 +1,14 @@
-﻿  main.cpp
+﻿  Shape.cpp
   Rect.cpp
+  Node.cpp
+  main.cpp
   List.cpp
 d:\labsc-\oopc++\lab6\list.cpp(23): warning C4018: '<': signed/unsigned mismatch
 d:\labsc-\oopc++\lab6\list.cpp(139): warning C4018: '<': signed/unsigned mismatch
 d:\labsc-\oopc++\lab6\list.cpp(144): warning C4018: '<': signed/unsigned mismatch
 d:\labsc-\oopc++\lab6\list.cpp(232): warning C4018: '<': signed/unsigned mismatch
 d:\labsc-\oopc++\lab6\list.cpp(235): warning C4018: '<': signed/unsigned mismatch
-d:\labsc-\oopc++\lab6\list.cpp(310): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\labsc-\oopc++\lab6\list.cpp(323): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Cicle.cpp
 d:\labsc-\oopc++\lab6\cicle.cpp(62): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Generating Code...

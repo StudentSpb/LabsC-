@@ -18,9 +18,18 @@
     <ClCompile Include="lab_templ_except.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="myString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mystack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

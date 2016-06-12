@@ -143,8 +143,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lab_templ_except.cpp" />
+    <ClCompile Include="myString.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Mystack.h" />
+    <ClInclude Include="myString.h" />
     <ClInclude Include="Template.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
