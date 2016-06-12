@@ -82,7 +82,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	stop
 
-
+		MyString strst("First");
+	MyString strst1("Second");
+	MyString strst2("Third");
+	strStack.push(strst);
+	strStack.push(strst1);
+	strStack.push(strst2);
 
 
 

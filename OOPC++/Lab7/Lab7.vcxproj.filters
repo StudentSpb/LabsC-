@@ -21,6 +21,9 @@
     <ClCompile Include="myString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyStack2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Template.h">
@@ -30,6 +33,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mystack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStack2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

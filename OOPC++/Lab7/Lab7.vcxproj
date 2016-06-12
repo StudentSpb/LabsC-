@@ -143,10 +143,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lab_templ_except.cpp" />
+    <ClCompile Include="MyStack2.cpp" />
     <ClCompile Include="myString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mystack.h" />
+    <ClInclude Include="MyStack2.h" />
     <ClInclude Include="myString.h" />
     <ClInclude Include="Template.h" />
   </ItemGroup>
