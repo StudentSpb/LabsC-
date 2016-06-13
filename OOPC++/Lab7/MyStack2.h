@@ -28,7 +28,7 @@ public:
 template <typename T> MyStack2<T>::MyStack2(const MyStack2& other)
 {
 	Node* node = new Node(other.top->data);
-	top = node;
+	this->top = node;
 	Node* tmp = other.top->pNext;
 	while (tmp != nullptr)
 	{
@@ -41,7 +41,18 @@ template <typename T> MyStack2<T>::MyStack2(const MyStack2& other)
 template <typename T>
 MyStack2<T>::MyStack2(MyStack2&& other)
 {
-
+	Node* node = new Node(other.top->data);
+	this->top = node;
+	Node* tmp = other.top->pNext;
+	other.top = nullptr;
+	while (tmp != nullptr)
+	{
+		node->pNext = new Node(tmp->data);
+		node = node->pNext;	
+		auto nodeForDelete = tmp;
+		tmp = tmp->pNext;
+		nodeForDelete = nullptr;
+	}
 }
 
 template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
@@ -52,7 +63,7 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 		Node* tmp = other.top;
 		while (n && tmp)
 		{
-			n->m_data = tmp->m_data;
+			n->m_data = tmp->data;
 			n = n->pNext;
 			tmp = tmp->pNext;
 		}
@@ -60,7 +71,7 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 		{
 			while (tmp)
 			{
-				n = new Node(tmp->m_data);
+				n = new Node(tmp->data);
 				n = n->pNext;
 				tmp = tmp->pNext;
 			}
@@ -95,7 +106,7 @@ template <typename T> void MyStack2<T>::push(const T& x)
 
 template <typename T> T MyStack2<T>::pop()
 {
-	T tmp = top->m_data;
+	T tmp = top->data;
 	top = top->pNext;
 	return tmp;
 }
@@ -108,9 +119,9 @@ template <typename T> void MyStack2<T>::print()
 }
 
 
-template <typename T> void MyStack2<T>::print(Node* n) //реккурсивно
+template <typename T> void MyStack2<T>::print(Node* node) 
 {
-	if (n == nullptr) return;
-	print(n->pNext);
-	std::cout << n->m_data << "    ";
+	if (node == nullptr) return;
+	print(node->pNext);
+	std::cout << node->data << "    ";
 }

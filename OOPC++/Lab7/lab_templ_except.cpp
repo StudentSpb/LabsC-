@@ -9,6 +9,7 @@
 #include "Template.h"
 #include "myString.h"
 #include "Mystack.h"
+#include "MyStack2.h"
 //#include <stdexcept>
 
 
@@ -64,6 +65,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			//стек из 10 элементов MyString - strStack и поэкспериментируйте с функциями
 			//push() и pop(), operator[]
 
+		/*
 	MyStack<int> iStack;
 	MyStack<MyString> strStack;
 	
@@ -88,7 +90,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	strStack.push(strst);
 	strStack.push(strst1);
 	strStack.push(strst2);
-
+	*/
 
 
 	//Задание 2. Реализуйте шаблон стека - MyStack2 таким образом, чтобы 
@@ -96,7 +98,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Реализуйте возможность распечатать элементы стека в том порядке, в котором их заносил (push())
 	//пользователь
 
-
+	MyStack2<int> my_stack2;
+	my_stack2.push(3);
+	my_stack2.push(9);
+	my_stack2.push(1);
+	my_stack2.print();
+	stop
 
 
 
