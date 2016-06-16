@@ -98,11 +98,21 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Реализуйте возможность распечатать элементы стека в том порядке, в котором их заносил (push())
 	//пользователь
 
-	MyStack2<int> my_stack2;
-	my_stack2.push(3);
-	my_stack2.push(9);
-	my_stack2.push(1);
-	my_stack2.print();
+	MyStack2<int> stack;
+	stack.push(3);
+	stack.push(9);
+	stack.push(1);
+	stack.print();
+
+
+	MyStack2<int> stack2;
+	stack2.push(22);
+	stack2.push(11);
+	stack2.push(33);
+	stack2.push(44);
+	stack2 = stack;
+	stack2.print();
+
 	stop
 
 

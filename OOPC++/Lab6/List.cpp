@@ -135,12 +135,14 @@ List & List::operator=(const List & other)
 			pThis = pThis->pNext;
 			pOther = pOther->pNext;
 		}
+
 		Node* pThisEnd = Tail.pPrev;
 		for(int i = count; i< this->m_size; i ++)
 		{
 			delete pThisEnd;
 			pThisEnd = Tail.pPrev;
 		}
+
 		for (int i = count; i < other.m_size; i++)
 		{
 			this->AddToTail(*pOther->m_Data);

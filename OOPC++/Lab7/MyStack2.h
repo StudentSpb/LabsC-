@@ -14,6 +14,7 @@ template <typename T> class MyStack2
 
 	Node* top;
 	void print(Node* n);
+	int count = 0;
 public:
 	MyStack2() : top(nullptr) {};
 	void push(const T& x);
@@ -61,9 +62,10 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 	{
 		Node* n = top;
 		Node* tmp = other.top;
-		while (n && tmp)
+/*
+		while (count == other.count)
 		{
-			n->m_data = tmp->data;
+			n->data = tmp->data;
 			n = n->pNext;
 			tmp = tmp->pNext;
 		}
@@ -85,6 +87,24 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 				n = tmp;
 			}
 		}
+		*/
+
+		int count = (this->count < other.count) ? this->count : other.count;
+		for (int i = 0; i < count; i++)
+		{
+			n->data = tmp->data;
+			n = n->pNext;
+			tmp = tmp->pNext;
+		}
+
+		for (int i = count; i< this->count; i++)
+		{
+			tmp = n->pNext;
+			delete n;
+			n = tmp;
+		}
+
+
 	}
 	return *this;
 
@@ -101,6 +121,7 @@ template <typename T> void MyStack2<T>::push(const T& x)
 	Node* n = new Node(x);
 	n->pNext = top;
 	top = n;
+	count++;
 }
 
 
@@ -108,6 +129,7 @@ template <typename T> T MyStack2<T>::pop()
 {
 	T tmp = top->data;
 	top = top->pNext;
+	count--;
 	return tmp;
 }
 
