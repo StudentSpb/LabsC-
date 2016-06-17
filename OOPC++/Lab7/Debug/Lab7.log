@@ -1,4 +1,4 @@
-﻿Сборка начата 16.06.2016 14:23:53.
+﻿Сборка начата 17.06.2016 9:46:35.
      1>Проект "C:\Users\posohov_na\Documents\Project\LabsC-\OOPC++\Lab7\Lab7.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt lab_templ_except.cpp
@@ -12,4 +12,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.43
+Затраченное время: 00:00:02.01

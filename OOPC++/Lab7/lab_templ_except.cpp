@@ -102,14 +102,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	stack.push(3);
 	stack.push(9);
 	stack.push(1);
+	stack.push(8);
+	stack.push(15);
 	stack.print();
 
 
 	MyStack2<int> stack2;
 	stack2.push(22);
 	stack2.push(11);
-	stack2.push(33);
-	stack2.push(44);
 	stack2 = stack;
 	stack2.print();
 
