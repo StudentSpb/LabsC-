@@ -10,7 +10,8 @@
 #include "myString.h"
 #include "Mystack.h"
 #include "MyStack2.h"
-//#include <stdexcept>
+#include <stdexcept>
+#include "MyQueue.h"
 
 
 #define stop __asm nop
@@ -27,6 +28,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//шаблона с помощью приведенного ниже фрагмента кода.
 	//Подсказка 1: объявление шаблона корректнее поместить в .h-файл.
 
+
+
 	int iX = 1, iY = -1;
 	Swap(iX, iY);
 	std::cout << iX << " " << iY << std::endl;
@@ -38,11 +41,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Подсказка 2: подумайте, что нужно реализовать, для того,
 	//			чтобы следующий вызов работал с объектами MyString
 	//			не только корректно, но и эффективно
+	
 	MyString str1("One"), str2("Two");
 	Swap(str1, str2);
 	std::cout << str1 << " " << str2<< std::endl;
-	stop
-
+  	stop
+	
 
 		/////////////////////////////////////////////////////////////////////
 
@@ -113,16 +117,45 @@ int _tmain(int argc, _TCHAR* argv[])
 	stack2 = stack;
 	stack2.print();
 
+	MyStack2<int> stack3;
+	stack3.push(1);
+	stack3.push(2);
+	stack3.push(3);
+	stack3.push(4);
+	stack3.push(5);
+	stack3.push(6);
+	stack3.push(7);
+	stack3.push(8);
+	
+	stack3 = stack;
+	stack3.print();
+
+
+	MyStack2<int> stack4(stack);
+	stack4.print();
+
 	stop
 
 
 
 
-	//Задание 3. Реализуйте шаблон очереди - MyQueue таким образом, чтобы 
-	//для хранения элементов использовался динамический массив.
-	//При использовании массива следует учесть специфику очереди, то есть
-	//когда заполнен "хвост", в "голове" скорее всего уже имеются свободные элементы
-	//=> должен быть организован кольцевой буфер
+		//Задание 3. Реализуйте шаблон очереди - MyQueue таким образом, чтобы 
+		//для хранения элементов использовался динамический массив.
+		//При использовании массива следует учесть специфику очереди, то есть
+		//когда заполнен "хвост", в "голове" скорее всего уже имеются свободные элементы
+		//=> должен быть организован кольцевой буфер
+
+
+		MyQueue<int> queue;
+		queue.push(323);
+		queue.push(213);
+		queue.push(723);
+		queue.push(5);
+
+		queue.print();
+
+		queue.pop();
+		stop
 
 	return 0;
 }

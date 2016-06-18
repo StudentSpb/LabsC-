@@ -4,7 +4,7 @@
 class MyString
 {
 private:
-    char* m_pStr;	//строка-член класса
+    char* m_pStr;	
 public:
 	const char* GetString() const;
 	void SetString(char*);
@@ -14,6 +14,8 @@ public:
 	MyString(const MyString&);
 	MyString(MyString &&);
 	~MyString();
+
+	void Swap(MyString& other_string);
 
 	//Перегрузка операторов
 	MyString& operator=(const MyString& other);
@@ -26,5 +28,4 @@ public:
 	MyString operator+(const MyString& other);
 };
 
-MyString GetMyString(const char*, ...);
 std::ostream& operator<<(std::ostream& os, const MyString& string);

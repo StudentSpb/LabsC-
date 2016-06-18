@@ -8,9 +8,11 @@ private:
 	T m_ar[capacity];
 public:
 	MyStack() = default;
+	MyStack(MyStack && other) = default;
 	void push(const T& value);
 	T pop();
 	T& operator[](int i);
+	MyStack& operator=(MyStack&& other) = default;
 	int GetCount() const;
 };
 
@@ -41,7 +43,7 @@ template <typename T, int capacity> void MyStack<T, capacity>::push(const T &x)
 template <class T, int i> T MyStack<T, i>::pop()
 {
 	count--;
-	if (count > 0)
+	if (count >= 0)
 	{
 		return m_ar[count];
 	}

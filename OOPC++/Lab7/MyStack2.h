@@ -28,32 +28,29 @@ public:
 
 template <typename T> MyStack2<T>::MyStack2(const MyStack2& other)
 {
-	Node* node = new Node(other.top->data);
-	this->top = node;
-	Node* tmp = other.top->pNext;
-	while (tmp != nullptr)
+	top = nullptr;
+	count = 0;
+	if(other.count> 0)
 	{
-		node->pNext = new Node(tmp->data);
-		node = node->pNext;
-		tmp = tmp->pNext;
+		Node* node = new Node(other.top->data);
+		this->top = node;
+		Node* tmp = other.top->pNext;
+		while (tmp != nullptr)
+		{
+			node->pNext = new Node(tmp->data);
+			node = node->pNext;
+			tmp = tmp->pNext;
+		}	
 	}
 }
 
 template <typename T>
 MyStack2<T>::MyStack2(MyStack2&& other)
 {
-	Node* node = new Node(other.top->data);
-	this->top = node;
-	Node* tmp = other.top->pNext;
+	top = other.top;
+	count = other.count;
 	other.top = nullptr;
-	while (tmp != nullptr)
-	{
-		node->pNext = new Node(tmp->data);
-		node = node->pNext;	
-		auto nodeForDelete = tmp;
-		tmp = tmp->pNext;
-		nodeForDelete = nullptr;
-	}
+	other.count = 0;
 }
 
 template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
@@ -75,7 +72,8 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 				n = n->pNext;
 				tmp = tmp->pNext;
 			}
-			for (int i = count; i < this->count; i++)
+			int cnt = this->count;
+			for (int i = count; i < cnt; i++)
 			{
 				pop();
 			}
@@ -112,6 +110,10 @@ template <typename T> MyStack2<T>& MyStack2<T>::operator=(const MyStack2& other)
 template <typename T>
 MyStack2<T>& MyStack2<T>::operator=(MyStack2&& other)
 {
+	count = other.count;
+	other.count = 0;
+	top = other.top;
+	other.top = nullptr;
 	return *this;
 }
 

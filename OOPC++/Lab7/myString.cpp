@@ -41,6 +41,13 @@ MyString::~MyString()
 	delete[] m_pStr;
 }
 
+void MyString::Swap(MyString& other_string)
+{
+	char* str = m_pStr;
+	m_pStr = other_string.m_pStr;
+	other_string.m_pStr = str;
+	str = nullptr;
+}
 
 const char* MyString::GetString() const //делаем const чтобы нельзя было изменить указатель
 {
@@ -54,29 +61,6 @@ void MyString::SetString(char * str)
 	size_t n = strlen(str) + 1;
 	m_pStr = new char[n];
 	strcpy(m_pStr, str);
-}
-
-MyString GetMyString(const char* str, ...)
-{
-
-	size_t n = 0;
-	for (const char **p = &str; *p != 0; *p++)
-	{
-		n = n + strlen(*p);
-	}
-	char* myStr = new char[n+1];
-
-	myStr[0] = 0;
-	for (const char **p = &str; *p != 0; *p++)
-	{
-		strcat(myStr, *p);
-	}
-
-	MyString my_string(myStr);
-	delete[] myStr;
-	
-	//move констукртор
-	return my_string;
 }
 
 std::ostream & operator<<(std::ostream & os, const MyString & string)
