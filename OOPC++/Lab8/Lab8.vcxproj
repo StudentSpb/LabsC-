@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myString.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Templates.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lab_vector_list_deque.cpp" />
+    <ClCompile Include="myString.cpp" />
+    <ClCompile Include="Point.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01816895-5720-4B1E-90C0-75897B662335}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -141,9 +151,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="lab_vector_list_deque.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
